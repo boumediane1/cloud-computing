@@ -2,9 +2,9 @@
   "apiVersion": "dashboard.grafana.app/v2beta1",
   "kind": "Dashboard",
   "metadata": {
-    "name": "ad8sfwq",
-    "generation": 31,
-    "creationTimestamp": "2026-02-05T18:05:29Z",
+    "name": "adt78cf",
+    "generation": 3,
+    "creationTimestamp": "2026-02-05T19:20:31Z",
     "labels": {},
     "annotations": {}
   },
@@ -144,7 +144,7 @@
                 "wideLayout": true
               }
             },
-            "version": "12.3.2"
+            "version": "12.3.1"
           }
         }
       },
@@ -165,7 +165,7 @@
                       "spec": {
                         "editorMode": "builder",
                         "expr": "rate(nginx_http_requests_total[$__rate_interval])",
-                        "legendFormat": "__auto",
+                        "legendFormat": "{{instance}}",
                         "range": true
                       },
                       "version": "v0"
@@ -270,6 +270,21 @@
                         }
                       }
                     ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "options": "95.111.254.18:9113"
+                    },
+                    "properties": [
+                      {
+                        "id": "color",
+                        "value": {
+                          "fixedColor": "orange",
+                          "mode": "fixed"
+                        }
+                      }
+                    ]
                   }
                 ]
               },
@@ -287,7 +302,7 @@
                 }
               }
             },
-            "version": "12.3.2"
+            "version": "12.3.1"
           }
         }
       },
@@ -381,7 +396,7 @@
                 "wideLayout": true
               }
             },
-            "version": "12.3.2"
+            "version": "12.3.1"
           }
         }
       }
@@ -437,7 +452,7 @@
     "preload": false,
     "tags": [],
     "timeSettings": {
-      "autoRefresh": "",
+      "autoRefresh": "auto",
       "autoRefreshIntervals": [
         "5s",
         "10s",
@@ -451,7 +466,7 @@
         "1d"
       ],
       "fiscalYearStartMonth": 0,
-      "from": "now-6h",
+      "from": "now-5m",
       "hideTimepicker": false,
       "timezone": "browser",
       "to": "now"
@@ -461,4 +476,3 @@
   },
   "status": {}
 }
-
