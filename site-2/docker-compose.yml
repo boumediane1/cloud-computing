@@ -16,7 +16,7 @@ services:
     ports:
       - "9114:9113"
     environment:
-      - NGINX_STATUS_URL=http://site-2/stub_status
+      - SCRAPE_URI=http://site-2/stub_status
     networks:
       - site-2
 
