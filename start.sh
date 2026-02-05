@@ -6,3 +6,4 @@ docker compose up -d
 
 cd /home/boumediane/cloud-computing/load-balancer
 docker compose up -d
+

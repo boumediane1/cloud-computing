@@ -6,3 +6,20 @@ services:
       - "8020:80"
     volumes:
       - ./index.html:/usr/share/nginx/html/index.html
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - site-2
+
+  nginx-prometheus-exporter:
+    image: nginx/nginx-prometheus-exporter:latest
+    container_name: nginx-prometheus-exporter-site-2
+    ports:
+      - "9114:9113"
+    environment:
+      - NGINX_STATUS_URL=http://site-2/stub_status
+    networks:
+      - site-2
+
+networks:
+  site-2:
+    driver: bridge
