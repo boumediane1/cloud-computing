@@ -4,4 +4,4 @@ global:
 scrape_configs:
   - job_name: 'nginx_servers'
     static_configs:
-      - targets: ['10.211.55.13:9113', '10.211.55.13:9114']
+      - targets: ['95.111.254.18:9113', '95.111.254.18:9114']
